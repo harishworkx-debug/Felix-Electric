@@ -76,8 +76,8 @@ export default function Header() {
               <ChevronDown className={`h-3.5 w-3.5 transition ${servicesOpen ? 'rotate-180' : ''}`} />
             </button>
             {servicesOpen && (
-              <div className="absolute left-0 top-full w-72 pt-2">
-                <div className="rounded-xl border border-ink-700 bg-ink-950/98 p-2 shadow-card backdrop-blur-md">
+              <div className="absolute left-0 top-full w-72 pt-2 z-50">
+                <div className="rounded-xl border border-ink-700 bg-ink-950 p-2 shadow-xl backdrop-blur-md">
                   {services.map((s) => (
                     <Link
                       key={s.slug}
@@ -117,8 +117,8 @@ export default function Header() {
               <ChevronDown className={`h-3.5 w-3.5 transition ${areasOpen ? 'rotate-180' : ''}`} />
             </button>
             {areasOpen && (
-              <div className="absolute left-0 top-full w-56 pt-2">
-                <div className="rounded-xl border border-ink-700 bg-ink-950/98 p-2 shadow-card backdrop-blur-md">
+              <div className="absolute left-0 top-full w-56 pt-2 z-50">
+                <div className="rounded-xl border border-ink-700 bg-ink-950 p-2 shadow-xl backdrop-blur-md">
                   {serviceAreas.map((a) => (
                     <Link
                       key={a.slug}

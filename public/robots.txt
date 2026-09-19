@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://felixelectricaz.com/sitemap.xml
+Sitemap: https://www.felixelectricllc.com/sitemap.xml

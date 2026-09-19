@@ -380,12 +380,12 @@ export const serviceAreas: ServiceArea[] = [
 ];
 
 export const reviews = [
-  { name: 'Maria G.', area: 'Oro Valley, AZ', rating: 5, text: 'Felix Electric upgraded our panel from 100 to 200 amps. They were on time, explained everything, and the price was exactly what they quoted. Highly recommend!' },
-  { name: 'James T.', area: 'Tucson, AZ', rating: 5, text: 'Called them on a Saturday morning when my outlets stopped working. They came out the same day, found a loose neutral wire, and fixed it in an hour. True professionals.' },
+  { name: 'Ana Grijalva', area: 'Tucson, AZ', rating: 5, text: 'Felix Electric came to install a chandelier on a 20+ ft ceiling. They were very efficient, knowledgeable and fast. Their work was super clean and professional. They showed up pretty quick also.' },
+  { name: 'Michael Caverly', area: 'Tucson, AZ', rating: 5, text: 'Felix has been doing my work for a little over 5 yrs. Right from the beginning I thought he did great work and was reasonably priced. There was no need to look any further. Retired Home Builder' },
+  { name: 'Jose Ibarra', area: 'Tucson, AZ', rating: 5, text: 'Hands down best electrical company in Tucson. Definitely will be using again in the future. 10/10, 100% recommend if you’re looking for any electrical work done look no further, Felix Electrical will have you covered' },
+  { name: 'Sebastian Redondo', area: 'Tucson, AZ', rating: 5, text: 'Solid team that works diligently and professionally. Great work, passed inspection first time' },
+  { name: 'Jose Dominguez', area: 'Tucson, AZ', rating: 5, text: 'Excellent service and great communication. The work was done perfectly on time and to code. Highly recommended!' },
   { name: 'Sarah K.', area: 'Marana, AZ', rating: 5, text: 'Installed a Tesla Wall Connector in my garage. Clean install, got the permit, and passed inspection first try. Will use them again for future projects.' },
-  { name: 'Robert L.', area: 'Vail, AZ', rating: 5, text: 'Had them install recessed lighting throughout my living room and kitchen. The work is flawless and they left no mess. Couldn\'t be happier.' },
-  { name: 'Patricia M.', area: 'Sahuarita, AZ', rating: 5, text: 'After a scary burning smell from my outlet, I called Felix Electric. They came out within the hour, found an overloaded circuit, and made it safe. Lifesavers.' },
-  { name: 'David R.', area: 'Catalina, AZ', rating: 5, text: 'Honest and reliable. They did a whole-home inspection before I bought my house and caught an outdated panel the home inspector missed. Saved me thousands.' },
 ];
 
 export const generalFaqs = [

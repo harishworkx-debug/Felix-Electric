@@ -79,12 +79,11 @@ export default function Home() {
               Licensed Electrician in Tucson, AZ
             </div>
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.1] text-white sm:text-5xl md:text-6xl animate-fade-up">
-              Expert Electrical Service You Can{' '}
-              <span className="text-volt-400">Trust</span>
+              Tucson’s Most Trusted & Reliable{' '}
+              <span className="text-volt-400">Electricians</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-200 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              From panel upgrades to emergency repairs, Felix Electric delivers safe, reliable electrical
-              work for homes and businesses across Tucson and Southern Arizona.
+              Don't let electrical issues disrupt your life. From fast emergency repairs and panel upgrades to complete rewiring, Felix Electric delivers premium, code-compliant solutions for homes and businesses across Southern Arizona.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row animate-fade-up" style={{ animationDelay: '0.2s' }}>
@@ -146,11 +145,10 @@ export default function Home() {
           <div ref={servicesReveal.ref} className={`reveal ${servicesReveal.visible ? 'is-visible' : ''} mx-auto max-w-2xl text-center`}>
             <span className="eyebrow"><Zap className="h-3.5 w-3.5" /> Our Services</span>
             <h2 className="mt-4 font-display text-3xl font-extrabold text-white md:text-4xl">
-              Complete Electrical Solutions for Tucson
+              Premium Electrical Services for Every Need
             </h2>
             <p className="mt-4 text-lg text-ink-300">
-              Whether it's a simple outlet repair or a full panel upgrade, our licensed electricians
-              get the job done right — the first time.
+              From rapid troubleshooting and simple outlet repairs to complex commercial build-outs, our licensed electricians are equipped to handle any challenge with safety and precision.
             </p>
           </div>
 
@@ -189,11 +187,10 @@ export default function Home() {
             <div ref={trustReveal.ref} className={`reveal ${trustReveal.visible ? 'is-visible' : ''}`}>
               <span className="eyebrow"><ShieldCheck className="h-3.5 w-3.5" /> Why Choose Felix Electric</span>
               <h2 className="mt-4 font-display text-3xl font-extrabold text-white md:text-4xl">
-                Trusted by Tucson Homeowners & Businesses
+                Why We Are Tucson’s Top Choice
               </h2>
               <p className="mt-4 text-lg text-ink-300">
-                For over 15 years, Felix Electric has built a reputation for honest pricing, expert
-                workmanship, and dependable service across Southern Arizona.
+                With over 15 years of hands-on experience, Felix Electric sets the gold standard for electrical contractors. We provide lasting peace of mind through unwavering professionalism and crystal-clear pricing.
               </p>
               <div className="mt-8 space-y-5">
                 {[
