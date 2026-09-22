@@ -10,7 +10,7 @@ export const business = {
   stateShort: 'AZ',
   fullAddress: 'Tucson, AZ 85701',
   mapsUrl: 'https://maps.app.goo.gl/PvJJndFciwEJQRPq8',
-  mapsEmbed: 'https://maps.google.com/maps?q=Tucson%2C%20Arizona&t=&z=11&ie=UTF8&iwloc=&output=embed',
+  mapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d866489.0906691604!2d-112.5516710656324!3d31.96841037792156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6da51feebe8aa97d%3A0xd1755290973d90b3!2sFelix%20Electric!5e0!3m2!1sen!2sin!4v1790058403443!5m2!1sen!2sin',
   hours: [
     { day: 'Monday – Friday', time: '7:00 AM – 7:00 PM' },
     { day: 'Saturday', time: '8:00 AM – 5:00 PM' },
