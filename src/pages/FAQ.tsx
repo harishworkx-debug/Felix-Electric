@@ -18,8 +18,8 @@ export default function FAQ() {
   return (
     <>
       <Helmet>
-        <title>FAQ | Felix Electric Tucson AZ | (520) 304-3644</title>
-        <meta name="description" content="Frequently asked questions about electrical service in Tucson, AZ. Licensing, pricing, same-day service, warranties & more. Call Felix Electric at (520) 304-3644." />
+        <title>FAQ | Felix Electric Tucson AZ | (520) 929-0498</title>
+        <meta name="description" content="Frequently asked questions about electrical service in Tucson, AZ. Licensing, pricing, same-day service, warranties & more. Call Felix Electric at (520) 929-0498." />
         <link rel="canonical" href="https://felixelectricaz.com/faq" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>

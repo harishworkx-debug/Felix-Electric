@@ -21,8 +21,8 @@ export default function Reviews() {
   return (
     <>
       <Helmet>
-        <title>Reviews | Felix Electric Tucson AZ | (520) 304-3644</title>
-        <meta name="description" content="Read real customer reviews of Felix Electric — Tucson's trusted electrician. 4.9-star rating from 180+ happy customers. Call (520) 304-3644." />
+        <title>Reviews | Felix Electric Tucson AZ | (520) 929-0498</title>
+        <meta name="description" content="Read real customer reviews of Felix Electric — Tucson's trusted electrician. 4.9-star rating from 180+ happy customers. Call (520) 929-0498." />
         <link rel="canonical" href="https://felixelectricaz.com/reviews" />
         <script type="application/ld+json">{JSON.stringify(reviewSchema)}</script>
       </Helmet>

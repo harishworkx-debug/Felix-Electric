@@ -10,7 +10,7 @@ export default function ServiceAreasIndex() {
     <>
       <Helmet>
         <title>Service Areas | Electrician Tucson & Southern Arizona | Felix Electric</title>
-        <meta name="description" content="Felix Electric serves Tucson, Marana, Oro Valley, Sahuarita, Green Valley, Catalina, Vail & more. Find your area and call (520) 304-3644 for electrical service." />
+        <meta name="description" content="Felix Electric serves Tucson, Marana, Oro Valley, Sahuarita, Green Valley, Catalina, Vail & more. Find your area and call (520) 929-0498 for electrical service." />
         <link rel="canonical" href="https://felixelectricaz.com/service-areas" />
       </Helmet>
 

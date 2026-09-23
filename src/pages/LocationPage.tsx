@@ -21,8 +21,8 @@ export default function LocationPage({ area, type }: { area: ServiceArea; type: 
     ? `Electrician in ${area.name}, AZ`
     : `Electrical Services in ${area.name}, AZ`;
   const metaDesc = isElectrician
-    ? `Licensed electrician in ${area.name}, AZ. Residential & commercial electrical repair, panel upgrades, EV chargers, emergency service. Call Felix Electric at (520) 304-3644.`
-    : `Electrical services in ${area.name}, AZ — wiring, lighting, panel upgrades, inspections & emergency repair. Licensed, insured. Call Felix Electric at (520) 304-3644.`;
+    ? `Licensed electrician in ${area.name}, AZ. Residential & commercial electrical repair, panel upgrades, EV chargers, emergency service. Call Felix Electric at (520) 929-0498.`
+    : `Electrical services in ${area.name}, AZ — wiring, lighting, panel upgrades, inspections & emergency repair. Licensed, insured. Call Felix Electric at (520) 929-0498.`;
 
   const localReviews = reviews.slice(0, 3);
   const nearbyAreas = serviceAreas.filter((a) => a.slug !== area.slug).slice(0, 4);
@@ -109,7 +109,7 @@ export default function LocationPage({ area, type }: { area: ServiceArea; type: 
               </p>
               <p>
                 We're just {area.distance} from central Tucson, which means we can often reach your
-                {area.name} home or business the same day you call. Contact us at (520) 304-3644 and
+                {area.name} home or business the same day you call. Contact us at (520) 929-0498 and
                 let's get your electrical project handled.
               </p>
             </div>
