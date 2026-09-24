@@ -22,7 +22,7 @@ export const services: ServicePage[] = [
     title: 'Residential Electrician Tucson AZ | Felix Electric',
     h1: 'Residential Electrician in Tucson, AZ',
     metaDescription:
-      'Licensed residential electrician in Tucson, AZ. Wiring, panel upgrades, lighting, safety inspections & more. Call Felix Electric at (520) 929-0498 for a free quote today.',
+      'Licensed residential electrician in Tucson, AZ. Wiring, panel upgrades, lighting, safety inspections & more. Call Felix Electric at (520) 929-0296 for a free quote today.',
     shortTitle: 'Residential Electrician',
     summary:
       'Complete home electrical services — from new wiring to safety inspections — done right the first time.',
@@ -40,7 +40,7 @@ export const services: ServicePage[] = [
       { title: 'Code-Compliant Work', desc: 'Every installation meets current NEC and Tucson municipal codes.' },
     ],
     process: [
-      { step: 'Schedule Online or by Phone', desc: 'Call (520) 929-0498 and pick a time that works for you — same-day slots available.' },
+      { step: 'Schedule Online or by Phone', desc: 'Call (520) 929-0296 and pick a time that works for you — same-day slots available.' },
       { step: 'On-Site Diagnosis', desc: 'We inspect the issue, explain what\'s wrong, and give you a flat-rate quote.' },
       { step: 'Expert Repair', desc: 'Once approved, we complete the work efficiently and to code.' },
       { step: 'Final Walkthrough', desc: 'We test everything, clean up, and make sure you\'re 100% satisfied.' },
@@ -48,7 +48,7 @@ export const services: ServicePage[] = [
     faqs: [
       { q: 'Do you offer free estimates for residential electrical work?', a: 'Yes. For most residential projects we provide a free, no-obligation quote either over the phone or on-site. For large rewiring jobs we may charge a small diagnostic fee that is credited toward the work.' },
       { q: 'Are you licensed to work in Tucson?', a: 'Absolutely. Felix Electric holds Arizona ROC license #329844 and is fully insured and bonded for residential work throughout the Tucson metro area.' },
-      { q: 'How quickly can you come out?', a: 'For most service calls we offer same-day or next-day appointments. Call (520) 929-0498 and we\'ll find the earliest available slot.' },
+      { q: 'How quickly can you come out?', a: 'For most service calls we offer same-day or next-day appointments. Call (520) 929-0296 and we\'ll find the earliest available slot.' },
     ],
   },
   {
@@ -56,7 +56,7 @@ export const services: ServicePage[] = [
     title: 'Commercial Electrician Tucson AZ | Felix Electric',
     h1: 'Commercial Electrician in Tucson, AZ',
     metaDescription:
-      'Reliable commercial electrician in Tucson, AZ for offices, retail, restaurants & industrial facilities. Tenant build-outs, maintenance & emergency repairs. Call (520) 929-0498.',
+      'Reliable commercial electrician in Tucson, AZ for offices, retail, restaurants & industrial facilities. Tenant build-outs, maintenance & emergency repairs. Call (520) 929-0296.',
     shortTitle: 'Commercial Electrician',
     summary:
       'Keep your business running with expert commercial electrical service, maintenance, and code compliance.',
@@ -80,7 +80,7 @@ export const services: ServicePage[] = [
       { step: 'Completion & Handoff', desc: 'Final inspection, testing, and as-built documentation delivered.' },
     ],
     faqs: [
-      { q: 'Do you work after hours for commercial clients?', a: 'Yes. We offer after-hours and weekend service so your business stays operational. Call (520) 929-0498 to schedule.' },
+      { q: 'Do you work after hours for commercial clients?', a: 'Yes. We offer after-hours and weekend service so your business stays operational. Call (520) 929-0296 to schedule.' },
       { q: 'Can you handle multi-tenant buildings?', a: 'We routinely service multi-tenant retail, office, and industrial properties throughout Tucson and can coordinate with multiple tenants and property managers.' },
       { q: 'Do you provide maintenance contracts?', a: 'Yes — we offer customized preventive maintenance agreements that include scheduled inspections, priority response, and discounted rates.' },
     ],
@@ -90,7 +90,7 @@ export const services: ServicePage[] = [
     title: 'Electrical Repair Tucson AZ | Fast & Reliable | Felix Electric',
     h1: 'Electrical Repair in Tucson, AZ',
     metaDescription:
-      'Fast electrical repair in Tucson, AZ. Flickering lights, dead outlets, breakers tripping, burning smell? Licensed electricians at (520) 929-0498. Same-day service available.',
+      'Fast electrical repair in Tucson, AZ. Flickering lights, dead outlets, breakers tripping, burning smell? Licensed electricians at (520) 929-0296. Same-day service available.',
     shortTitle: 'Electrical Repair',
     summary:
       'From tripping breakers to dead outlets, we diagnose and repair electrical problems fast — and fix the root cause.',
@@ -124,15 +124,15 @@ export const services: ServicePage[] = [
     title: 'Emergency Electrician Tucson AZ | 24/7 Fast Response | Felix Electric',
     h1: 'Emergency Electrician in Tucson, AZ',
     metaDescription:
-      '24/7 emergency electrician in Tucson, AZ. Power out, sparking outlet, burning smell? Fast response from licensed electricians. Call (520) 929-0498 now.',
+      '24/7 emergency electrician in Tucson, AZ. Power out, sparking outlet, burning smell? Fast response from licensed electricians. Call (520) 929-0296 now.',
     shortTitle: 'Emergency Electrician',
     summary:
-      'Electrical emergency? We respond fast to keep your home or business safe. Call (520) 929-0498 now.',
+      'Electrical emergency? We respond fast to keep your home or business safe. Call (520) 929-0296 now.',
     icon: 'Siren',
     image: images.outdoorPanel,
     imageAlt: 'Emergency electrician working on an outdoor electrical panel in Tucson',
     intro: [
-      'Electrical emergencies don\'t wait for business hours — and neither do we. If you have sparking outlets, a burning smell, a panel that\'s hot to the touch, or you\'ve lost power entirely, call Felix Electric immediately at (520) 929-0498. Our emergency electricians in Tucson respond fast to protect your safety and property.',
+      'Electrical emergencies don\'t wait for business hours — and neither do we. If you have sparking outlets, a burning smell, a panel that\'s hot to the touch, or you\'ve lost power entirely, call Felix Electric immediately at (520) 929-0296. Our emergency electricians in Tucson respond fast to protect your safety and property.',
       'We prioritize emergency calls and can often have a licensed electrician at your door within the hour. Until we arrive, keep everyone away from the affected area and, if safe, turn off the breaker to that circuit.',
     ],
     benefits: [
@@ -142,7 +142,7 @@ export const services: ServicePage[] = [
       { title: 'Permanent Fix', desc: 'We don\'t just patch — we repair the underlying problem to code.' },
     ],
     process: [
-      { step: 'Call Immediately', desc: 'Dial (520) 929-0498 — describe the emergency and we\'ll advise on immediate safety steps.' },
+      { step: 'Call Immediately', desc: 'Dial (520) 929-0296 — describe the emergency and we\'ll advise on immediate safety steps.' },
       { step: 'Rapid Dispatch', desc: 'Nearest available electrician is sent to your address right away.' },
       { step: 'Secure the Hazard', desc: 'We make the situation safe before any repair work begins.' },
       { step: 'Full Repair', desc: 'Once safe, we complete the repair and verify your system is sound.' },
@@ -158,7 +158,7 @@ export const services: ServicePage[] = [
     title: 'Electrical Panel Upgrade Tucson AZ | Felix Electric',
     h1: 'Electrical Panel Upgrade in Tucson, AZ',
     metaDescription:
-      'Electrical panel upgrade & replacement in Tucson, AZ. Is your panel 100 amps or outdated? Upgrade to 200 amps for safety & capacity. Call (520) 929-0498 for a free quote.',
+      'Electrical panel upgrade & replacement in Tucson, AZ. Is your panel 100 amps or outdated? Upgrade to 200 amps for safety & capacity. Call (520) 929-0296 for a free quote.',
     shortTitle: 'Panel Upgrade',
     summary:
       'Upgrade your outdated electrical panel to 200 amps for safety, capacity, and modern appliance support.',
@@ -192,7 +192,7 @@ export const services: ServicePage[] = [
     title: 'EV Charger Installation Tucson AZ | Home Charging | Felix Electric',
     h1: 'EV Charger Installation in Tucson, AZ',
     metaDescription:
-      'EV charger installation in Tucson, AZ. Tesla, ChargePoint, Grizzl-E & more. Level 2 home charging stations installed by licensed electricians. Call (520) 929-0498.',
+      'EV charger installation in Tucson, AZ. Tesla, ChargePoint, Grizzl-E & more. Level 2 home charging stations installed by licensed electricians. Call (520) 929-0296.',
     shortTitle: 'EV Charger Installation',
     summary:
       'Level 2 home EV charging stations installed by licensed electricians. Tesla, ChargePoint, Grizzl-E & more.',
@@ -226,7 +226,7 @@ export const services: ServicePage[] = [
     title: 'Lighting Installation Tucson AZ | Indoor & Outdoor | Felix Electric',
     h1: 'Lighting Installation in Tucson, AZ',
     metaDescription:
-      'Lighting installation in Tucson, AZ — recessed lights, chandeliers, outdoor lighting, landscape & security lighting. Licensed electricians. Call (520) 929-0498.',
+      'Lighting installation in Tucson, AZ — recessed lights, chandeliers, outdoor lighting, landscape & security lighting. Licensed electricians. Call (520) 929-0296.',
     shortTitle: 'Lighting Installation',
     summary:
       'Recessed lighting, chandeliers, outdoor and landscape lighting — installed safely and beautifully.',
@@ -260,7 +260,7 @@ export const services: ServicePage[] = [
     title: 'Outlet & Switch Repair Tucson AZ | Felix Electric',
     h1: 'Outlet & Switch Repair in Tucson, AZ',
     metaDescription:
-      'Outlet & switch repair in Tucson, AZ. Dead outlets, loose switches, GFCI/AFCI installation, USB outlets. Licensed electricians. Call (520) 929-0498.',
+      'Outlet & switch repair in Tucson, AZ. Dead outlets, loose switches, GFCI/AFCI installation, USB outlets. Licensed electricians. Call (520) 929-0296.',
     shortTitle: 'Outlet & Switch Repair',
     summary:
       'Dead outlets, loose switches, or need GFCI protection? We repair and replace outlets and switches fast.',
@@ -294,7 +294,7 @@ export const services: ServicePage[] = [
     title: 'Ceiling Fan Installation Tucson AZ | Felix Electric',
     h1: 'Ceiling Fan Installation in Tucson, AZ',
     metaDescription:
-      'Ceiling fan installation in Tucson, AZ. Safe mounting, proper wiring, fan-rated boxes & remote controls. Licensed electricians. Call (520) 929-0498 to schedule.',
+      'Ceiling fan installation in Tucson, AZ. Safe mounting, proper wiring, fan-rated boxes & remote controls. Licensed electricians. Call (520) 929-0296 to schedule.',
     shortTitle: 'Ceiling Fan Installation',
     summary:
       'Safe ceiling fan installation with fan-rated boxes, proper wiring, and remote control setup.',
@@ -328,7 +328,7 @@ export const services: ServicePage[] = [
     title: 'Electrical Inspection Tucson AZ | Safety Inspection | Felix Electric',
     h1: 'Electrical Inspection in Tucson, AZ',
     metaDescription:
-      'Electrical safety inspection in Tucson, AZ. Whole-home inspection, panel check, grounding, GFCI/AFCI audit & detailed report. Licensed electricians. Call (520) 929-0498.',
+      'Electrical safety inspection in Tucson, AZ. Whole-home inspection, panel check, grounding, GFCI/AFCI audit & detailed report. Licensed electricians. Call (520) 929-0296.',
     shortTitle: 'Electrical Inspection',
     summary:
       'Whole-home electrical safety inspection with a detailed report — perfect for older homes or buyers.',
@@ -391,7 +391,7 @@ export const reviews = [
 export const generalFaqs = [
   { q: 'What areas does Felix Electric serve?', a: 'We serve Tucson and surrounding areas including Marana, Oro Valley, Sahuarita, Green Valley, Catalina, Vail, South Tucson, and Casas Adobes.' },
   { q: 'Are you licensed and insured?', a: 'Yes. Felix Electric holds Arizona ROC license #329844 and is fully insured and bonded for your protection.' },
-  { q: 'Do you offer same-day service?', a: 'For most repair calls we offer same-day or next-day appointments. Call (520) 929-0498 for current availability.' },
+  { q: 'Do you offer same-day service?', a: 'For most repair calls we offer same-day or next-day appointments. Call (520) 929-0296 for current availability.' },
   { q: 'Do you provide free estimates?', a: 'Yes, we provide free, no-obligation quotes for most projects. For complex jobs we may charge a diagnostic fee that is credited toward the work.' },
   { q: 'What are your payment options?', a: 'We accept cash, check, and all major credit cards. For larger projects we offer financing options — ask for details.' },
   { q: 'Do you guarantee your work?', a: 'Yes. All work is backed by our workmanship guarantee. If something isn\'t right, we\'ll come back and fix it at no charge.' },

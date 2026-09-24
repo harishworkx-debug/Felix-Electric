@@ -33,8 +33,8 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Felix Electric | Licensed Electrician Tucson AZ | Call (520) 929-0498</title>
-        <meta name="description" content="Felix Electric — licensed electrician in Tucson, AZ. Residential & commercial electrical service, panel upgrades, EV chargers, emergency repairs. Call (520) 929-0498 for same-day service." />
+        <title>Felix Electric | Licensed Electrician Tucson AZ | Call (520) 929-0296</title>
+        <meta name="description" content="Felix Electric — licensed electrician in Tucson, AZ. Residential & commercial electrical service, panel upgrades, EV chargers, emergency repairs. Call (520) 929-0296 for same-day service." />
         <link rel="canonical" href="https://felixelectricaz.com/" />
         <script type="application/ld+json">
           {JSON.stringify({

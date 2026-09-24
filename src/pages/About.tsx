@@ -9,7 +9,7 @@ export default function About() {
     <>
       <Helmet>
         <title>About Felix Electric | Trusted Tucson Electrician Since 2009</title>
-        <meta name="description" content="Learn about Felix Electric — licensed electricians serving Tucson, AZ for 15+ years. Honest pricing, expert workmanship, and reliable service. Call (520) 929-0498." />
+        <meta name="description" content="Learn about Felix Electric — licensed electricians serving Tucson, AZ for 15+ years. Honest pricing, expert workmanship, and reliable service. Call (520) 929-0296." />
         <link rel="canonical" href="https://felixelectricaz.com/about" />
       </Helmet>
 

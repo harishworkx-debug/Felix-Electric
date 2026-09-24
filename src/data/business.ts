@@ -2,7 +2,7 @@ export const business = {
   name: 'Felix Electric',
   shortName: 'Felix Electric',
   phone: '+1 520-304-3644',
-  phoneDisplay: '(520) 929-0498',
+  phoneDisplay: '(520) 929-0296',
   phoneRaw: '5203043644',
   email: 'info@felixelectricaz.com',
   city: 'Tucson',

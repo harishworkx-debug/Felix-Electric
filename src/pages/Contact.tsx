@@ -31,8 +31,8 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact Felix Electric | Electrician Tucson AZ | (520) 929-0498</title>
-        <meta name="description" content="Contact Felix Electric for licensed electrical service in Tucson, AZ. Call (520) 929-0498 or fill out our form for a free quote. Same-day service available." />
+        <title>Contact Felix Electric | Electrician Tucson AZ | (520) 929-0296</title>
+        <meta name="description" content="Contact Felix Electric for licensed electrical service in Tucson, AZ. Call (520) 929-0296 or fill out our form for a free quote. Same-day service available." />
         <link rel="canonical" href="https://felixelectricaz.com/contact" />
       </Helmet>
 
