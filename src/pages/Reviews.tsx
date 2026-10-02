@@ -55,7 +55,7 @@ export default function Reviews() {
                 <div className="flex gap-1 mb-3">
                   {[...Array(r.rating)].map((_, j) => <Star key={j} className="h-4 w-4 text-spark-400" fill="currentColor" />)}
                 </div>
-                <p className="text-sm leading-relaxed text-ink-200">"{r.text}"</p>
+                {r.text && <p className="text-sm leading-relaxed text-ink-200">"{r.text}"</p>}
                 <div className="mt-4 flex items-center gap-3 border-t border-ink-800 pt-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-volt-500/15 font-bold text-volt-400">
                     {r.name.charAt(0)}

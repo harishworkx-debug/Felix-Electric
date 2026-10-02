@@ -4,7 +4,7 @@ import {
   Phone, CheckCircle2, ChevronRight, Star, ShieldCheck, Clock, MapPin, ArrowRight, Zap,
 } from 'lucide-react';
 import { business, images } from '@/data/business';
-import { services, serviceAreas } from '@/data/services';
+import { services, serviceAreas, reviews } from '@/data/services';
 import type { ServicePage as ServicePageType } from '@/data/services';
 import CTASection from '@/components/CTASection';
 import { useReveal } from '@/hooks/useReveal';
@@ -103,6 +103,28 @@ export default function ServicePage({ service }: { service: ServicePageType }) {
         </div>
       </section>
 
+      {/* COMMON PROBLEMS */}
+      {service.problems && service.problems.length > 0 && (
+        <section className="section-pad border-t border-ink-800 bg-ink-900/10">
+          <div className="container-x">
+            <div className="text-center mx-auto max-w-2xl">
+              <span className="eyebrow">Common Issues</span>
+              <h2 className="mt-4 font-display text-3xl font-extrabold text-white md:text-4xl">
+                Common {service.shortTitle} Problems We Solve
+              </h2>
+            </div>
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              {service.problems.map((p, i) => (
+                <div key={i} className="card">
+                  <h3 className="font-display text-lg font-bold text-white mb-2">{p.title}</h3>
+                  <p className="text-sm leading-relaxed text-ink-300">{p.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* BENEFITS */}
       <section className="section-pad bg-ink-900/30">
         <div className="container-x">
@@ -170,6 +192,37 @@ export default function ServicePage({ service }: { service: ServicePageType }) {
                 </summary>
                 <p className="mt-4 text-sm leading-relaxed text-ink-300">{f.a}</p>
               </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* REVIEWS */}
+      <section className="section-pad bg-ink-900/30 border-t border-ink-800">
+        <div className="container-x">
+          <div className="text-center">
+            <span className="eyebrow"><Star className="h-3.5 w-3.5" /> Reviews</span>
+            <h2 className="mt-4 font-display text-3xl font-extrabold text-white md:text-4xl">
+              Real Customer Reviews
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {reviews.slice(0, 3).map((r, i) => (
+              <div key={i} className="card">
+                <div className="flex gap-1 mb-3">
+                  {[...Array(r.rating)].map((_, j) => <Star key={j} className="h-4 w-4 text-spark-400" fill="currentColor" />)}
+                </div>
+                {r.text && <p className="text-sm leading-relaxed text-ink-200">"{r.text}"</p>}
+                <div className="mt-4 flex items-center gap-3 border-t border-ink-800 pt-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-volt-500/15 font-bold text-volt-400">
+                    {r.name.charAt(0)}
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-white">{r.name}</div>
+                    <div className="text-xs text-ink-400">{r.area}</div>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>

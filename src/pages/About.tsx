@@ -41,8 +41,8 @@ export default function About() {
                 cutting corners — just honest, expert work done right the first time.
               </p>
               <p>
-                Over the past {business.yearsServing} years, we've grown from a one-truck operation into a
-                trusted team of licensed electricians serving the entire Tucson metro area. But our
+                Over the past {business.yearsServing} years in business, we've grown from a one-truck operation into a
+                trusted team of licensed electricians serving the entire Tucson metro area. Our master electricians bring over 25+ years of combined hands-on experience to every project. But our
                 commitment hasn't changed: treat every customer's home like it's our own, and back every
                 job with a workmanship guarantee.
               </p>
@@ -54,8 +54,8 @@ export default function About() {
             </div>
             <div className="mt-8 grid grid-cols-3 gap-4">
               {[
-                { icon: Award, value: `${business.yearsServing}+`, label: 'Years' },
-                { icon: Users, value: '2,500+', label: 'Jobs Done' },
+                { icon: Award, value: `${business.yearsServing}`, label: 'Years in Business' },
+                { icon: Users, value: '25+', label: 'Years Experience' },
                 { icon: ShieldCheck, value: '100%', label: 'Guaranteed' },
               ].map((s, i) => (
                 <div key={i} className="card text-center">

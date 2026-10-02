@@ -24,7 +24,9 @@ export default function LocationPage({ area, type }: { area: ServiceArea; type: 
     ? `Licensed electrician in ${area.name}, AZ. Residential & commercial electrical repair, panel upgrades, EV chargers, emergency service. Call Felix Electric at (520) 929-0296.`
     : `Electrical services in ${area.name}, AZ — wiring, lighting, panel upgrades, inspections & emergency repair. Licensed, insured. Call Felix Electric at (520) 929-0296.`;
 
-  const localReviews = reviews.slice(0, 3);
+  const exactReviews = reviews.filter((r) => r.area.includes(area.name));
+  const otherReviews = reviews.filter((r) => !r.area.includes(area.name));
+  const localReviews = [...exactReviews, ...otherReviews].slice(0, 3);
   const nearbyAreas = serviceAreas.filter((a) => a.slug !== area.slug).slice(0, 4);
 
   const localSchema = {
@@ -96,22 +98,30 @@ export default function LocationPage({ area, type }: { area: ServiceArea; type: 
               Your Trusted {area.name} Electrician
             </h2>
             <div className="mt-5 space-y-4 text-ink-200 leading-relaxed">
-              <p>
-                Felix Electric is proud to serve {area.name} and the surrounding communities in {area.county}.
-                As a locally owned electrical company based in Tucson, we understand the unique needs of
-                {area.name} homeowners and businesses — from the desert climate's impact on outdoor
-                electrical systems to the older wiring found in many area homes.
-              </p>
-              <p>
-                {isElectrician
-                  ? `When you search for an electrician in ${area.name}, you want someone who's licensed, insured, and stands behind their work. That's exactly what you get with Felix Electric. We handle everything from simple outlet repairs to complete panel upgrades, and we respond fast because we know electrical issues can't wait.`
-                  : `Our electrical services in ${area.name} cover the full range of residential and commercial needs — wiring, lighting, panel upgrades, EV charger installation, safety inspections, and 24/7 emergency repair. Every job is done to current NEC and local code, with upfront pricing and a workmanship guarantee.`}
-              </p>
-              <p>
-                We're just {area.distance} from central Tucson, which means we can often reach your
-                {area.name} home or business the same day you call. Contact us at (520) 929-0296 and
-                let's get your electrical project handled.
-              </p>
+              {area.uniqueParagraphs ? (
+                area.uniqueParagraphs.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))
+              ) : (
+                <>
+                  <p>
+                    Felix Electric is proud to serve {area.name} and the surrounding communities in {area.county}.
+                    As a locally owned electrical company based in Tucson, we understand the unique needs of
+                    {area.name} homeowners and businesses — from the desert climate's impact on outdoor
+                    electrical systems to the older wiring found in many area homes.
+                  </p>
+                  <p>
+                    {isElectrician
+                      ? `When you search for an electrician in ${area.name}, you want someone who's licensed, insured, and stands behind their work. That's exactly what you get with Felix Electric. We handle everything from simple outlet repairs to complete panel upgrades, and we respond fast because we know electrical issues can't wait.`
+                      : `Our electrical services in ${area.name} cover the full range of residential and commercial needs — wiring, lighting, panel upgrades, EV charger installation, safety inspections, and 24/7 emergency repair. Every job is done to current NEC and local code, with upfront pricing and a workmanship guarantee.`}
+                  </p>
+                  <p>
+                    We're just {area.distance} from central Tucson, which means we can often reach your
+                    {area.name} home or business the same day you call. Contact us at (520) 929-0296 and
+                    let's get your electrical project handled.
+                  </p>
+                </>
+              )}
             </div>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -184,7 +194,7 @@ export default function LocationPage({ area, type }: { area: ServiceArea; type: 
                 <div className="flex gap-1 mb-3">
                   {[...Array(r.rating)].map((_, j) => <Star key={j} className="h-4 w-4 text-spark-400" fill="currentColor" />)}
                 </div>
-                <p className="text-sm leading-relaxed text-ink-200">"{r.text}"</p>
+                {r.text && <p className="text-sm leading-relaxed text-ink-200">"{r.text}"</p>}
                 <div className="mt-4 flex items-center gap-3 border-t border-ink-800 pt-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-volt-500/15 font-bold text-volt-400">
                     {r.name.charAt(0)}

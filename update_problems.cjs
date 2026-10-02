@@ -1,0 +1,30 @@
+const fs = require('fs');
+let content = fs.readFileSync('src/data/services.ts', 'utf8');
+
+const problemData = {
+  'residential-electrician-tucson-az': `problems: [ { title: 'Flickering Lights', desc: 'Often caused by loose wiring or overloaded circuits. We trace the connection and fix the root cause.' }, { title: 'Tripping Breakers', desc: 'A sign your circuit is drawing too much power or there is a short. We upgrade the circuit or find the fault.' }, { title: 'Dead Outlets', desc: 'Can result from a tripped GFCI, loose wire, or burnt receptacle. We test and replace faulty outlets safely.' } ],`,
+  'commercial-electrician-tucson-az': `problems: [ { title: 'Power Surges', desc: 'Can damage sensitive equipment. We install whole-building surge protectors.' }, { title: 'Code Violations', desc: 'Outdated wiring can fail inspections. We bring your property up to current NEC and local codes.' }, { title: 'Inadequate Lighting', desc: 'Poor lighting affects productivity and safety. We design and install efficient LED retrofits.' } ],`,
+  'electrical-repair-tucson-az': `problems: [ { title: 'Sparking Outlets', desc: 'A serious fire hazard. Turn off the breaker and call us immediately for a safe replacement.' }, { title: 'Burning Smells', desc: 'Indicates overheating wires. This requires immediate emergency diagnostic and repair.' }, { title: 'Frequent Surges', desc: 'Can destroy electronics. We find the source and stabilize your power supply.' } ],`,
+  'emergency-electrician-tucson-az': `problems: [ { title: 'Complete Power Loss', desc: 'When only your house is dark, it could be a main breaker failure. We respond 24/7 to restore power.' }, { title: 'Flooded Electrical', desc: 'Water and electricity are a deadly mix. We safely isolate the power and assess the damage.' }, { title: 'Hot Electrical Panels', desc: 'A panel hot to the touch is a critical fire risk. We dispatch immediately to secure it.' } ],`,
+  'electrical-panel-upgrade-tucson-az': `problems: [ { title: 'Not Enough Power', desc: 'Modern homes need more power. We upgrade 100-amp panels to 200-amp to support new appliances.' }, { title: 'Federal Pacific Panels', desc: 'Known to fail to trip during overloads. We replace these dangerous panels immediately.' }, { title: 'Rust and Corrosion', desc: 'Moisture in the panel compromises connections. We replace damaged buss bars and weather-seal the enclosure.' } ],`,
+  'ev-charger-installation-tucson-az': `problems: [ { title: 'Slow Charging', desc: 'Standard 120V outlets take days to charge. We install Level 2 chargers for overnight full charges.' }, { title: 'Tripping During Charge', desc: 'EVs draw continuous high loads. We run dedicated circuits so your breaker never trips.' }, { title: 'Outdoor Installation Needs', desc: 'We install weatherproof NEMA enclosures for safe driveway charging.' } ],`,
+  'lighting-installation-tucson-az': `problems: [ { title: 'High Energy Bills', desc: 'Old incandescent or halogen lights waste power. We upgrade to energy-efficient LED fixtures.' }, { title: 'Dim or Uninviting Spaces', desc: 'Poor lighting makes rooms feel small. We design recessed lighting layouts that brighten your home.' }, { title: 'Security Concerns', desc: 'Dark exteriors invite trouble. We install motion-sensor and dusk-to-dawn security lighting.' } ],`,
+  'outlet-switch-repair-tucson-az': `problems: [ { title: 'Plugs Falling Out', desc: 'Worn out receptacles lose their grip, causing arcs and fires. We install fresh, tight outlets.' }, { title: 'No GFCI Protection', desc: 'Water areas need GFCIs by code. We upgrade kitchens, baths, and outdoor outlets for safety.' }, { title: 'Switches Feeling Warm', desc: 'A warm dimmer or switch indicates an overload or failing component. We replace them promptly.' } ],`,
+  'ceiling-fan-installation-tucson-az': `problems: [ { title: 'Wobbly Fans', desc: 'Often caused by poor mounting or unbalanced blades. We secure and balance the fan perfectly.' }, { title: 'Humming Noises', desc: 'Can be a motor issue or incompatible dimmer switch. We install the correct fan controls.' }, { title: 'Improper Support Boxes', desc: 'Hanging a fan on a light-fixture box is dangerous. We install heavy-duty fan-rated braces.' } ],`,
+  'electrical-inspection-tucson-az': `problems: [ { title: 'Buying an Older Home', desc: 'Older homes often have hidden electrical issues. We provide a full report before you buy.' }, { title: 'Unpermitted Work', desc: 'DIY wiring is a major liability. We identify and correct unpermitted work to ensure safety.' }, { title: 'Insurance Requirements', desc: 'Insurers often require a four-point inspection. We provide the certified documentation they need.' } ],`,
+  'new-construction-electrician-tucson-az': `problems: [ { title: 'Poor Electrical Planning', desc: 'Not enough outlets or bad lighting layout. We design comprehensive plans that fit your lifestyle.' }, { title: 'Failed Inspections', desc: 'Delays cost money. Our work is guaranteed to pass local Tucson inspections the first time.' }, { title: 'Lack of Smart Home Integration', desc: 'We pre-wire for data, security, and smart lighting during the framing stage.' } ],`,
+  'electrical-remodeling-tucson-az': `problems: [ { title: 'Overloaded Kitchen Circuits', desc: 'Modern kitchens need multiple dedicated circuits. We run new lines for microwaves, ovens, and islands.' }, { title: 'Knob and Tube Wiring', desc: 'Dangerous outdated wiring found in historic remodels. We fully rewire the space to modern code.' }, { title: 'Removing Walls', desc: 'Opening up spaces means relocating wires. We safely reroute electrical systems during demo.' } ],`
+};
+
+for (const [slug, problemsText] of Object.entries(problemData)) {
+  const regex = new RegExp(`(slug:\\s*'${slug}',[\\s\\S]*?faqs:\\s*\\[[\\s\\S]*?\\])(\\n\\s*\\},?)`);
+  content = content.replace(regex, `$1,\n    ${problemsText}$2`);
+}
+
+content = content.replace(
+  'faqs: { q: string; a: string }[];',
+  'faqs: { q: string; a: string }[];\n  problems?: { title: string; desc: string }[];'
+);
+
+fs.writeFileSync('src/data/services.ts', content);
+console.log('Successfully updated services.ts');

@@ -33,8 +33,8 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Felix Electric | Licensed Electrician Tucson AZ | Call (520) 929-0296</title>
-        <meta name="description" content="Felix Electric — licensed electrician in Tucson, AZ. Residential & commercial electrical service, panel upgrades, EV chargers, emergency repairs. Call (520) 929-0296 for same-day service." />
+        <title>Electrician Tucson AZ | Residential & Commercial | Felix Electric</title>
+        <meta name="description" content="Need a reliable electrician in Tucson, AZ? Felix Electric provides residential and commercial electrical services, repairs, upgrades and EV charger installation. Contact us for a quote." />
         <link rel="canonical" href="https://felixelectricaz.com/" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -79,8 +79,8 @@ export default function Home() {
               Licensed Electrician in Tucson, AZ
             </div>
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.1] text-white sm:text-5xl md:text-6xl animate-fade-up">
-              Tucson’s Most Trusted & Reliable{' '}
-              <span className="text-volt-400">Electricians</span>
+              Trusted Residential & Commercial{' '}
+              <span className="text-volt-400">Electrician in Tucson, AZ</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-200 animate-fade-up" style={{ animationDelay: '0.1s' }}>
               Don't let electrical issues disrupt your life. From fast emergency repairs and panel upgrades to complete rewiring, Felix Electric delivers premium, code-compliant solutions for homes and businesses across Southern Arizona.
@@ -145,34 +145,71 @@ export default function Home() {
           <div ref={servicesReveal.ref} className={`reveal ${servicesReveal.visible ? 'is-visible' : ''} mx-auto max-w-2xl text-center`}>
             <span className="eyebrow"><Zap className="h-3.5 w-3.5" /> Our Services</span>
             <h2 className="mt-4 font-display text-3xl font-extrabold text-white md:text-4xl">
-              Premium Electrical Services for Every Need
+              Professional Electrical Services in Tucson, AZ
             </h2>
             <p className="mt-4 text-lg text-ink-300">
               From rapid troubleshooting and simple outlet repairs to complex commercial build-outs, our licensed electricians are equipped to handle any challenge with safety and precision.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((s, i) => {
+          <h2 className="mt-16 font-display text-2xl font-extrabold text-white border-b border-ink-800 pb-2">
+            Residential Electrical Services
+          </h2>
+          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {services.filter(s => s.slug.includes('residential') || s.slug.includes('remodeling') || s.slug.includes('new-construction')).map((s) => {
               const Icon = iconMap[s.icon] || Zap;
               return (
-                <Link
-                  key={s.slug}
-                  to={`/${s.slug}`}
-                  className="card group flex flex-col"
-                >
+                <Link key={s.slug} to={`/${s.slug}`} className="card group flex flex-col">
                   <div className="mb-4 flex items-center gap-3">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-volt-500/10 transition group-hover:bg-volt-500/20">
                       <Icon className="h-6 w-6 text-volt-400" />
                     </div>
-                    <h3 className="font-display text-lg font-bold text-white group-hover:text-volt-400 transition">
-                      {s.shortTitle}
-                    </h3>
+                    <h3 className="font-display text-lg font-bold text-white group-hover:text-volt-400 transition">{s.shortTitle}</h3>
                   </div>
                   <p className="flex-1 text-sm leading-relaxed text-ink-400">{s.summary}</p>
-                  <span className="mt-4 flex items-center gap-1.5 text-sm font-semibold text-volt-400">
-                    Explore {s.shortTitle} <ChevronRight className="h-4 w-4 transition group-hover:translate-x-1" />
-                  </span>
+                  <span className="mt-4 flex items-center gap-1.5 text-sm font-semibold text-volt-400">Explore {s.shortTitle} <ChevronRight className="h-4 w-4 transition group-hover:translate-x-1" /></span>
+                </Link>
+              );
+            })}
+          </div>
+
+          <h2 className="mt-12 font-display text-2xl font-extrabold text-white border-b border-ink-800 pb-2">
+            Commercial Electrical Services
+          </h2>
+          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {services.filter(s => s.slug.includes('commercial')).map((s) => {
+              const Icon = iconMap[s.icon] || Zap;
+              return (
+                <Link key={s.slug} to={`/${s.slug}`} className="card group flex flex-col">
+                  <div className="mb-4 flex items-center gap-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-volt-500/10 transition group-hover:bg-volt-500/20">
+                      <Icon className="h-6 w-6 text-volt-400" />
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-white group-hover:text-volt-400 transition">{s.shortTitle}</h3>
+                  </div>
+                  <p className="flex-1 text-sm leading-relaxed text-ink-400">{s.summary}</p>
+                  <span className="mt-4 flex items-center gap-1.5 text-sm font-semibold text-volt-400">Explore {s.shortTitle} <ChevronRight className="h-4 w-4 transition group-hover:translate-x-1" /></span>
+                </Link>
+              );
+            })}
+          </div>
+
+          <h2 className="mt-12 font-display text-2xl font-extrabold text-white border-b border-ink-800 pb-2">
+            Electrical Repairs, Upgrades & Installations
+          </h2>
+          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {services.filter(s => !s.slug.includes('residential') && !s.slug.includes('remodeling') && !s.slug.includes('new-construction') && !s.slug.includes('commercial')).map((s) => {
+              const Icon = iconMap[s.icon] || Zap;
+              return (
+                <Link key={s.slug} to={`/${s.slug}`} className="card group flex flex-col">
+                  <div className="mb-4 flex items-center gap-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-volt-500/10 transition group-hover:bg-volt-500/20">
+                      <Icon className="h-6 w-6 text-volt-400" />
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-white group-hover:text-volt-400 transition">{s.shortTitle}</h3>
+                  </div>
+                  <p className="flex-1 text-sm leading-relaxed text-ink-400">{s.summary}</p>
+                  <span className="mt-4 flex items-center gap-1.5 text-sm font-semibold text-volt-400">Explore {s.shortTitle} <ChevronRight className="h-4 w-4 transition group-hover:translate-x-1" /></span>
                 </Link>
               );
             })}
@@ -187,14 +224,14 @@ export default function Home() {
             <div ref={trustReveal.ref} className={`reveal ${trustReveal.visible ? 'is-visible' : ''}`}>
               <span className="eyebrow"><ShieldCheck className="h-3.5 w-3.5" /> Why Choose Felix Electric</span>
               <h2 className="mt-4 font-display text-3xl font-extrabold text-white md:text-4xl">
-                Why We Are Tucson’s Top Choice
+                Why Choose Felix Electric?
               </h2>
               <p className="mt-4 text-lg text-ink-300">
                 With over 15 years of hands-on experience, Felix Electric sets the gold standard for electrical contractors. We provide lasting peace of mind through unwavering professionalism and crystal-clear pricing.
               </p>
               <div className="mt-8 space-y-5">
                 {[
-                  { icon: ShieldCheck, title: 'Licensed, Insured & Bonded', desc: `Arizona ROC #329844 — every job is permitted, inspected, and guaranteed.` },
+                  { icon: ShieldCheck, title: 'Licensed, Insured & Bonded', desc: `Arizona ROC #329844 — every job is permitted, inspected, and guaranteed. (Verify our license online).` },
                   { icon: ThumbsUp, title: 'Upfront Flat-Rate Pricing', desc: 'You approve the price before we start. No hourly surprises, no hidden fees.' },
                   { icon: Clock, title: 'Same-Day & Emergency Service', desc: 'Electrical problems can\'t wait. We offer same-day appointments and 24/7 emergency response.' },
                   { icon: Award, title: 'Clean, Professional Work', desc: 'Drop cloths, shoe covers, and a spotless cleanup on every visit — every time.' },
@@ -229,8 +266,8 @@ export default function Home() {
                     <Zap className="h-6 w-6 text-ink-950" fill="currentColor" />
                   </div>
                   <div>
-                    <div className="font-display text-xl font-extrabold text-white">{business.yearsServing}+ Years</div>
-                    <div className="text-xs text-ink-400">Serving Tucson & Southern Arizona</div>
+                    <div className="font-display text-xl font-extrabold text-white">25+ Years Experience</div>
+                    <div className="text-xs text-ink-400">{business.yearsServing} Years in Business Serving Tucson</div>
                   </div>
                 </div>
               </div>
@@ -263,7 +300,7 @@ export default function Home() {
                 <div className="flex gap-1 mb-3">
                   {[...Array(r.rating)].map((_, j) => <Star key={j} className="h-4 w-4 text-spark-400" fill="currentColor" />)}
                 </div>
-                <p className="text-sm leading-relaxed text-ink-200">"{r.text}"</p>
+                {r.text && <p className="text-sm leading-relaxed text-ink-200">"{r.text}"</p>}
                 <div className="mt-4 flex items-center gap-3 border-t border-ink-800 pt-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-volt-500/15 font-bold text-volt-400">
                     {r.name.charAt(0)}
@@ -276,9 +313,12 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="mt-8 text-center">
-            <Link to="/reviews" className="btn-outline">
-              Read More Reviews <ArrowRight className="h-4 w-4" />
+          <div className="mt-8 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href={business.mapsUrl} target="_blank" rel="noreferrer" className="btn-outline">
+              Verify Our Reviews on Google <ArrowRight className="h-4 w-4" />
+            </a>
+            <Link to="/reviews" className="text-volt-400 hover:text-white transition text-sm font-semibold">
+              Or read reviews here
             </Link>
           </div>
         </div>
@@ -290,7 +330,7 @@ export default function Home() {
           <div ref={areasReveal.ref} className={`reveal ${areasReveal.visible ? 'is-visible' : ''} mx-auto max-w-2xl text-center`}>
             <span className="eyebrow"><MapPin className="h-3.5 w-3.5" /> Service Areas</span>
             <h2 className="mt-4 font-display text-3xl font-extrabold text-white md:text-4xl">
-              Proudly Serving Tucson & Southern Arizona
+              Areas We Serve Around Tucson
             </h2>
             <p className="mt-4 text-lg text-ink-300">
               Fast, reliable electrical service across the greater Tucson metro area. Click your area
@@ -360,7 +400,7 @@ export default function Home() {
             <div>
               <span className="eyebrow"><MapPin className="h-3.5 w-3.5" /> Find Us</span>
               <h2 className="mt-4 font-display text-3xl font-extrabold text-white">
-                Serving Tucson & All of Southern Arizona
+                Contact Your Tucson Electrician
               </h2>
               <p className="mt-4 text-ink-300">
                 Based in Tucson, we serve homeowners and businesses throughout Pima County and the

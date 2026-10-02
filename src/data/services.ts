@@ -14,6 +14,7 @@ export interface ServicePage {
   benefits: { title: string; desc: string }[];
   process: { step: string; desc: string }[];
   faqs: { q: string; a: string }[];
+  problems?: { title: string; desc: string }[];
 }
 
 export const services: ServicePage[] = [
@@ -257,8 +258,8 @@ export const services: ServicePage[] = [
   },
   {
     slug: 'outlet-switch-repair-tucson-az',
-    title: 'Outlet & Switch Repair Tucson AZ | Felix Electric',
-    h1: 'Outlet & Switch Repair in Tucson, AZ',
+    title: 'Electrical Outlet Repair Tucson AZ | Felix Electric',
+    h1: 'Electrical Outlet Repair in Tucson, AZ',
     metaDescription:
       'Outlet & switch repair in Tucson, AZ. Dead outlets, loose switches, GFCI/AFCI installation, USB outlets. Licensed electricians. Call (520) 929-0296.',
     shortTitle: 'Outlet & Switch Repair',
@@ -357,6 +358,74 @@ export const services: ServicePage[] = [
       { q: 'Do you inspect for insurance or real estate transactions?', a: 'Yes. We provide detailed reports suitable for insurance underwriting and real estate transactions.' },
     ],
   },
+  {
+    slug: 'new-construction-electrician-tucson-az',
+    title: 'New Construction Electrician Tucson AZ | Felix Electric',
+    h1: 'New Construction Electrician in Tucson, AZ',
+    metaDescription:
+      'Reliable new construction electrician in Tucson, AZ. Custom home wiring, commercial builds, lighting design, and full electrical system installations. Call (520) 929-0296.',
+    shortTitle: 'New Construction',
+    summary:
+      'Complete electrical design and installation for custom homes and new commercial builds, delivered on time and to code.',
+    icon: 'Building2',
+    image: images.wiring,
+    imageAlt: 'Electricians roughing in wiring on a new construction framing in Tucson',
+    intro: [
+      'Building a new home or commercial property in Tucson requires an electrical contractor you can rely on to keep your project on schedule. Felix Electric provides comprehensive new construction electrical services, working seamlessly with general contractors, architects, and property owners from the ground up.',
+      'From the initial temporary power pole to the final trim-out, our licensed electricians handle every phase of construction. We ensure flawless execution, code-compliant installations, and a final product that safely powers your property for decades.'
+    ],
+    benefits: [
+      { title: 'Full-Service Design', desc: 'Custom lighting layouts, smart home wiring, and efficient load planning.' },
+      { title: 'Strict Schedule Adherence', desc: 'We coordinate with other trades to keep your build on time.' },
+      { title: 'Code Compliance', desc: 'Guaranteed to pass all municipal and county electrical inspections.' },
+      { title: 'Temporary Power', desc: 'Setup of temporary job site power to keep construction moving.' }
+    ],
+    process: [
+      { step: 'Plan Review', desc: 'We review blueprints and provide an accurate, detailed proposal.' },
+      { step: 'Underground & Temp', desc: 'Trenching, underground conduit, and temporary power setup.' },
+      { step: 'Rough-In', desc: 'Wiring pulled and boxes mounted before drywall goes up.' },
+      { step: 'Trim-Out & Finish', desc: 'Installing fixtures, devices, panel completion, and final testing.' }
+    ],
+    faqs: [
+      { q: 'Do you work directly with homeowners on custom builds?', a: 'Yes, we work with both general contractors and individual owner-builders to design and install custom electrical systems.' },
+      { q: 'Can you wire for smart home automation during construction?', a: 'Absolutely. We can pre-wire for smart lighting, AV systems, security, and networking so your home is future-proofed from day one.' },
+      { q: 'How do you handle permitting?', a: 'We handle all necessary electrical permits and coordinate inspections with the city of Tucson or Pima County.' }
+    ]
+  },
+  {
+    slug: 'electrical-remodeling-tucson-az',
+    title: 'Electrical Remodeling Tucson AZ | Kitchens & Baths | Felix Electric',
+    h1: 'Electrical Remodeling in Tucson, AZ',
+    metaDescription:
+      'Expert electrical remodeling in Tucson, AZ. Kitchen and bathroom electrical upgrades, home additions, lighting retrofits. Licensed electricians. Call (520) 929-0296.',
+    shortTitle: 'Remodeling',
+    summary:
+      'Safe and code-compliant electrical upgrades for kitchen remodels, bathroom renovations, and home additions.',
+    icon: 'Wrench',
+    image: images.interior,
+    imageAlt: 'Modern renovated kitchen with recessed lighting and under-cabinet lights',
+    intro: [
+      'A successful remodel isn\'t just about how it looks — it\'s about how it works. Whether you\'re updating a vintage Tucson kitchen, adding a master suite, or converting a garage, Felix Electric provides the specialized electrical remodeling services you need.',
+      'Remodeling often uncovers old, unsafe wiring or overloaded circuits. Our licensed electricians assess your current system, run new dedicated circuits for modern appliances, add strategic lighting, and ensure your entire renovated space meets the latest National Electrical Code (NEC) standards.'
+    ],
+    benefits: [
+      { title: 'Dedicated Circuits', desc: 'New circuits for microwaves, ovens, and heavy appliances.' },
+      { title: 'Code Upgrades', desc: 'Upgrading ungrounded wiring and adding required GFCI/AFCI protection.' },
+      { title: 'Lighting Design', desc: 'Under-cabinet lighting, recessed cans, and modern fixture installation.' },
+      { title: 'Clean & Careful', desc: 'We respect your home and minimize dust and disruption during renovations.' }
+    ],
+    process: [
+      { step: 'Consultation', desc: 'We walk through the space to understand your layout and power needs.' },
+      { step: 'System Audit', desc: 'Evaluating your current panel to ensure it can handle the new load.' },
+      { step: 'Demolition & Wiring', desc: 'Safely removing old electrical and pulling new wire during the open-wall phase.' },
+      { step: 'Final Installation', desc: 'Installing outlets, switches, and fixtures once drywall and paint are done.' }
+    ],
+    faqs: [
+      { q: 'Will I need a panel upgrade for my remodel?', a: 'It depends on your current panel capacity and what appliances you are adding. We will assess your load and advise you upfront.' },
+      { q: 'Do you offer under-cabinet lighting for kitchens?', a: 'Yes, we specialize in custom lighting solutions including under-cabinet LEDs, recessed lighting, and pendant installations.' },
+      { q: 'Can you fix wiring done by a previous homeowner?', a: 'Yes. Remodels often reveal DIY electrical work. We can correct code violations and make your system safe.' }
+    ]
+  }
 ];
 
 export interface ServiceArea {
@@ -365,18 +434,91 @@ export interface ServiceArea {
   county: string;
   distance: string;
   description: string;
+  uniqueParagraphs?: string[];
 }
 
 export const serviceAreas: ServiceArea[] = [
-  { slug: 'tucson-az', name: 'Tucson', county: 'Pima County', distance: 'Main Hub', description: 'Full-service licensed electrician serving all of Tucson, from downtown to the Foothills. Same-day electrical repair, panel upgrades, EV charger installation, and more.' },
-  { slug: 'marana-az', name: 'Marana', county: 'Pima County', distance: '25 min NW', description: 'Fast residential and commercial electrical service across Marana, from Continental Ranch to Dove Mountain.' },
-  { slug: 'oro-valley-az', name: 'Oro Valley', county: 'Pima County', distance: '20 min N', description: 'Licensed electricians serving Oro Valley homes and businesses with panel upgrades, repairs, and EV charger installs.' },
-  { slug: 'sahuarita-az', name: 'Sahuarita', county: 'Pima County', distance: '30 min S', description: 'Electrical repair, lighting, and inspection services for Sahuarita and Rancho Sahuarita residents.' },
-  { slug: 'green-valley-az', name: 'Green Valley', county: 'Pima County', distance: '40 min S', description: 'Trusted electrician for Green Valley homes — safety inspections, outlet repair, and panel service.' },
-  { slug: 'catalina-az', name: 'Catalina', county: 'Pima County', distance: '20 min N', description: 'Electrical service, emergency repair, and installations for Catalina and SaddleBrooke.' },
-  { slug: 'vail-az', name: 'Vail', county: 'Pima County', distance: '25 min SE', description: 'Residential and commercial electrician serving Vail and the growing Rita Ranch area.' },
-  { slug: 'south-tucson-az', name: 'South Tucson', county: 'Pima County', distance: '5 min S', description: 'Same-day electrical repair and installation services for South Tucson and surrounding neighborhoods.' },
-  { slug: 'casas-adobes-az', name: 'Casas Adobes', county: 'Pima County', distance: '15 min N', description: 'Panel upgrades, lighting, and electrical repair for Casas Adobes and northern Tucson.' },
+  { 
+    slug: 'tucson-az', name: 'Tucson', county: 'Pima County', distance: 'Main Hub', 
+    description: 'Full-service licensed electrician serving all of Tucson, from downtown to the Foothills. Same-day electrical repair, panel upgrades, EV charger installation, and more.',
+    uniqueParagraphs: [
+      "As our primary service area, Tucson relies on Felix Electric for everything from historic home rewiring to new commercial build-outs.",
+      "Whether you're dealing with older electrical panels in the central neighborhoods or need EV charger installations in the Foothills, our team provides code-compliant, same-day service.",
+      "We understand the unique demands the Arizona heat puts on your electrical systems, especially HVAC circuits and outdoor lighting."
+    ]
+  },
+  { 
+    slug: 'marana-az', name: 'Marana', county: 'Pima County', distance: '25 min NW', 
+    description: 'Fast residential and commercial electrical service across Marana, from Continental Ranch to Dove Mountain.',
+    uniqueParagraphs: [
+      "Marana's rapid growth means many homes need modern electrical upgrades to support new appliances and electric vehicles.",
+      "From Continental Ranch to Dove Mountain, we help Marana residents with panel upgrades, dedicated circuits, and ceiling fan installations.",
+      "Our response times in Marana are fast because we know that losing power or having a faulty AC circuit in the desert heat is a true emergency."
+    ]
+  },
+  { 
+    slug: 'oro-valley-az', name: 'Oro Valley', county: 'Pima County', distance: '20 min N', 
+    description: 'Licensed electricians serving Oro Valley homes and businesses with panel upgrades, repairs, and EV charger installs.',
+    uniqueParagraphs: [
+      "Oro Valley homeowners trust Felix Electric to maintain and upgrade their residential electrical systems safely and professionally.",
+      "We frequently help Oro Valley residents with aesthetic lighting upgrades, smart home integrations, and whole-home surge protection.",
+      "If you're remodeling your kitchen or need a reliable 240V outlet for an electric vehicle, our licensed electricians are just a short drive away."
+    ]
+  },
+  { 
+    slug: 'sahuarita-az', name: 'Sahuarita', county: 'Pima County', distance: '30 min S', 
+    description: 'Electrical repair, lighting, and inspection services for Sahuarita and Rancho Sahuarita residents.',
+    uniqueParagraphs: [
+      "Serving Sahuarita and the Rancho Sahuarita master-planned community, we provide dependable electrical troubleshooting and repairs.",
+      "Many modern homes in Sahuarita benefit from our LED lighting upgrades and dedicated circuit installations for home offices or workshops.",
+      "We pride ourselves on transparent pricing and clean, professional work for every Sahuarita family we serve."
+    ]
+  },
+  { 
+    slug: 'green-valley-az', name: 'Green Valley', county: 'Pima County', distance: '40 min S', 
+    description: 'Trusted electrician for Green Valley homes — safety inspections, outlet repair, and panel service.',
+    uniqueParagraphs: [
+      "Green Valley is a vibrant community, and we specialize in safety-focused electrical updates for older homes and retirement properties.",
+      "From adding accessible outlets and switches to upgrading outdated breaker panels, we ensure your home is completely safe and up to current NEC code.",
+      "We offer flexible scheduling and clear communication, making us the preferred electrician for Green Valley residents."
+    ]
+  },
+  { 
+    slug: 'catalina-az', name: 'Catalina', county: 'Pima County', distance: '20 min N', 
+    description: 'Electrical service, emergency repair, and installations for Catalina and SaddleBrooke.',
+    uniqueParagraphs: [
+      "Whether you live in Catalina or SaddleBrooke, you need an electrician who understands both residential and semi-rural electrical needs.",
+      "We handle everything from securing outdoor lighting against monsoons to upgrading main service panels for increased capacity.",
+      "Our team arrives fully stocked to handle most Catalina electrical repairs on the very first visit."
+    ]
+  },
+  { 
+    slug: 'vail-az', name: 'Vail', county: 'Pima County', distance: '25 min SE', 
+    description: 'Residential and commercial electrician serving Vail and the growing Rita Ranch area.',
+    uniqueParagraphs: [
+      "Vail and Rita Ranch are expanding quickly, and Felix Electric is here to support both new construction and existing home electrical needs.",
+      "We routinely assist Vail homeowners with hot tub wiring, EV chargers, and comprehensive safety inspections.",
+      "Don't let amateur wiring risk your property; trust our fully licensed and bonded team for all your electrical projects in Vail."
+    ]
+  },
+  { 
+    slug: 'south-tucson-az', name: 'South Tucson', county: 'Pima County', distance: '5 min S', 
+    description: 'Same-day electrical repair and installation services for South Tucson and surrounding neighborhoods.',
+    uniqueParagraphs: [
+      "South Tucson properties often require specialized care, especially when updating historic or legacy wiring systems.",
+      "We provide fast, affordable electrical repairs, code corrections, and complete rewiring services for South Tucson businesses and homes.",
+      "Our commitment to the local community means you get honest assessments and reliable workmanship every single time."
+    ]
+  },
+  { 
+    slug: 'casas-adobes-az', name: 'Casas Adobes', county: 'Pima County', distance: '15 min N', 
+    description: 'Panel upgrades, lighting, and electrical repair for Casas Adobes and northern Tucson.',
+    uniqueParagraphs: [
+      "From custom lighting designs to complex electrical troubleshooting, we are the go-to electricians for Casas Adobes.",
+      "Many homes in this area feature beautiful architecture that requires careful, minimally invasive electrical work during renovations.",
+      "We ensure your Casas Adobes property is equipped with safe, modern electrical infrastructure that meets all modern energy demands."
+    ]
+  }
 ];
 
 export const reviews = [
@@ -384,8 +526,7 @@ export const reviews = [
   { name: 'Michael Caverly', area: 'Tucson, AZ', rating: 5, text: 'Felix has been doing my work for a little over 5 yrs. Right from the beginning I thought he did great work and was reasonably priced. There was no need to look any further. Retired Home Builder' },
   { name: 'Jose Ibarra', area: 'Tucson, AZ', rating: 5, text: 'Hands down best electrical company in Tucson. Definitely will be using again in the future. 10/10, 100% recommend if you’re looking for any electrical work done look no further, Felix Electrical will have you covered' },
   { name: 'Sebastian Redondo', area: 'Tucson, AZ', rating: 5, text: 'Solid team that works diligently and professionally. Great work, passed inspection first time' },
-  { name: 'Jose Dominguez', area: 'Tucson, AZ', rating: 5, text: 'Excellent service and great communication. The work was done perfectly on time and to code. Highly recommended!' },
-  { name: 'Sarah K.', area: 'Marana, AZ', rating: 5, text: 'Installed a Tesla Wall Connector in my garage. Clean install, got the permit, and passed inspection first try. Will use them again for future projects.' },
+  { name: 'Jose Dominguez', area: 'Tucson, AZ', rating: 5, text: '' }
 ];
 
 export const generalFaqs = [
