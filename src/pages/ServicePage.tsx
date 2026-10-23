@@ -44,6 +44,31 @@ export default function ServicePage({ service }: { service: ServicePageType }) {
     })),
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://felixelectricaz.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: 'https://felixelectricaz.com/services',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: service.shortTitle,
+        item: `https://felixelectricaz.com/${service.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <Helmet>
@@ -54,6 +79,7 @@ export default function ServicePage({ service }: { service: ServicePageType }) {
         <meta property="og:description" content={service.metaDescription} />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       {/* HERO */}

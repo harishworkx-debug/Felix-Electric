@@ -19,10 +19,10 @@ export default function ServiceAreasIndex() {
         <div className="relative container-x text-center">
           <span className="eyebrow"><MapPin className="h-3.5 w-3.5" /> Service Areas</span>
           <h1 className="mt-5 font-display text-4xl font-extrabold text-white md:text-5xl">
-            Where We Serve
+            Electrical Service Areas in Tucson & Southern Arizona
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-ink-300">
-            Proudly serving Tucson and all of Southern Arizona. Click your area for local service info.
+            Proudly serving Tucson and all surrounding communities across Pima County. Click your area for local service information and response times.
           </p>
           <a href={`tel:${business.phoneRaw}`} className="btn-call-lg mt-8">
             <Phone className="h-5 w-5" /> Call {business.phoneDisplay}
@@ -33,13 +33,6 @@ export default function ServiceAreasIndex() {
       <section className="section-pad">
         <div className="container-x">
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            <Link to="/electrician-tucson-az" className="card group flex items-center justify-between">
-              <div>
-                <div className="font-display text-lg font-bold text-white group-hover:text-volt-400">Tucson</div>
-                <div className="text-sm text-ink-400">Pima County · Main Service Area</div>
-              </div>
-              <ChevronRight className="h-5 w-5 text-ink-500 group-hover:text-volt-400" />
-            </Link>
             {serviceAreas.map((area) => (
               <Link key={area.slug} to={`/electrician-${area.slug}`} className="card group flex items-center justify-between">
                 <div>

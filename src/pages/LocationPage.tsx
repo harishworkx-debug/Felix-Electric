@@ -43,6 +43,31 @@ export default function LocationPage({ area, type }: { area: ServiceArea; type: 
     },
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://felixelectricaz.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Service Areas',
+        item: 'https://felixelectricaz.com/service-areas',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: `${area.name}, AZ`,
+        item: `https://felixelectricaz.com/${slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <Helmet>
@@ -50,6 +75,7 @@ export default function LocationPage({ area, type }: { area: ServiceArea; type: 
         <meta name="description" content={metaDesc} />
         <link rel="canonical" href={`https://felixelectricaz.com/${slug}`} />
         <script type="application/ld+json">{JSON.stringify(localSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       {/* HERO */}
@@ -123,6 +149,27 @@ export default function LocationPage({ area, type }: { area: ServiceArea; type: 
                 </>
               )}
             </div>
+
+            {area.subdivisions && area.subdivisions.length > 0 && (
+              <div className="mt-8 rounded-2xl border border-ink-800 bg-ink-900/40 p-6">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-volt-400">
+                  <MapPin className="h-4 w-4" />
+                  Neighborhoods & Communities Served in {area.name}
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {area.subdivisions.map((sub, idx) => (
+                    <span key={idx} className="rounded-lg border border-ink-700 bg-ink-800/80 px-3 py-1 text-xs font-medium text-ink-200">
+                      {sub}
+                    </span>
+                  ))}
+                </div>
+                {area.utility && (
+                  <div className="mt-4 border-t border-ink-800/80 pt-3 text-xs text-ink-400">
+                    <span className="font-semibold text-ink-200">Local Electric Utility:</span> {area.utility} — We coordinate meter disconnects, safety inspections, and municipal permits.
+                  </div>
+                )}
+              </div>
+            )}
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[

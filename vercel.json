@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    {
+      "source": "/electrical-services-:area",
+      "destination": "/electrician-:area",
+      "permanent": true
+    },
+    {
+      "source": "/electrical-services-:area/",
+      "destination": "/electrician-:area",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

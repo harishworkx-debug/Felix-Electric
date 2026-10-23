@@ -33,8 +33,8 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Electrician Tucson AZ | Residential & Commercial | Felix Electric</title>
-        <meta name="description" content="Need a reliable electrician in Tucson, AZ? Felix Electric provides residential and commercial electrical services, repairs, upgrades and EV charger installation. Contact us for a quote." />
+        <title>Electrician Tucson AZ | Licensed Electrical Contractor | Felix Electric</title>
+        <meta name="description" content="Looking for a licensed electrician in Tucson, AZ? Felix Electric delivers residential & commercial electrical repairs, 200A panel upgrades, EV chargers & 24/7 emergency service. ROC #329844." />
         <link rel="canonical" href="https://felixelectricaz.com/" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -44,6 +44,8 @@ export default function Home() {
             telephone: business.phone,
             email: business.email,
             url: 'https://felixelectricaz.com',
+            hasMap: business.mapsUrl,
+            sameAs: [business.mapsUrl],
             image: images.hero,
             priceRange: '$$',
             address: {
@@ -53,7 +55,15 @@ export default function Home() {
               postalCode: '85701',
               addressCountry: 'US',
             },
-            areaServed: ['Tucson', 'Marana', 'Oro Valley', 'Sahuarita', 'Green Valley', 'Catalina', 'Vail'],
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: '32.2226',
+              longitude: '-110.9747',
+            },
+            areaServed: [
+              'Tucson', 'Marana', 'Oro Valley', 'Sahuarita',
+              'Green Valley', 'Catalina', 'Vail', 'South Tucson', 'Casas Adobes'
+            ],
             aggregateRating: { '@type': 'AggregateRating', ratingValue: business.rating, reviewCount: business.reviewCount },
             openingHoursSpecification: [
               { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '07:00', closes: '19:00' },
@@ -76,11 +86,11 @@ export default function Home() {
           <div className="max-w-2xl">
             <div className="eyebrow animate-fade-in">
               <Zap className="h-3.5 w-3.5" />
-              Licensed Electrician in Tucson, AZ
+              Licensed Electrician in Tucson, AZ · ROC #329844
             </div>
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.1] text-white sm:text-5xl md:text-6xl animate-fade-up">
-              Trusted Residential & Commercial{' '}
-              <span className="text-volt-400">Electrician in Tucson, AZ</span>
+              Licensed Electrician &{' '}
+              <span className="text-volt-400">Electrical Contractor in Tucson, AZ</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-200 animate-fade-up" style={{ animationDelay: '0.1s' }}>
               Don't let electrical issues disrupt your life. From fast emergency repairs and panel upgrades to complete rewiring, Felix Electric delivers premium, code-compliant solutions for homes and businesses across Southern Arizona.

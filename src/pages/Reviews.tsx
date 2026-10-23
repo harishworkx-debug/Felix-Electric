@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Phone, Star } from 'lucide-react';
+import { Phone, Star, ExternalLink } from 'lucide-react';
 import { business } from '@/data/business';
 import { reviews } from '@/data/services';
 import CTASection from '@/components/CTASection';
@@ -30,7 +30,7 @@ export default function Reviews() {
       <section className="relative overflow-hidden pt-28 pb-12 md:pt-36 md:pb-16">
         <div className="absolute inset-0 bg-gradient-to-b from-ink-900 to-ink-950" />
         <div className="relative container-x text-center">
-          <span className="eyebrow"><Star className="h-3.5 w-3.5" /> Reviews</span>
+          <span className="eyebrow"><Star className="h-3.5 w-3.5" /> Verified Reviews</span>
           <h1 className="mt-5 font-display text-4xl font-extrabold text-white md:text-5xl">
             What Tucson Says About Us
           </h1>
@@ -39,11 +39,23 @@ export default function Reviews() {
               {[...Array(5)].map((_, i) => <Star key={i} className="h-6 w-6 text-spark-400" fill="currentColor" />)}
             </div>
             <span className="text-lg font-bold text-white">{business.rating}</span>
-            <span className="text-ink-400">· {business.reviewCount} reviews</span>
+            <span className="text-ink-400">· {business.reviewCount} Google reviews</span>
           </div>
-          <a href={`tel:${business.phoneRaw}`} className="btn-call-lg mt-8">
-            <Phone className="h-5 w-5" /> Call {business.phoneDisplay}
-          </a>
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a href={`tel:${business.phoneRaw}`} className="btn-call-lg">
+              <Phone className="h-5 w-5" /> Call {business.phoneDisplay}
+            </a>
+            <a
+              href={business.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline inline-flex items-center gap-2"
+            >
+              <Star className="h-4 w-4 text-spark-400" fill="currentColor" />
+              Read 180+ Reviews on Google Maps
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </section>
 

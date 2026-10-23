@@ -42,12 +42,31 @@ export default function About() {
               </p>
               <p>
                 Over the past {business.yearsServing} years in business, we've grown from a one-truck operation into a
-                trusted team of licensed electricians serving the entire Tucson metro area. Our master electricians bring over 25+ years of combined hands-on experience to every project. But our
-                commitment hasn't changed: treat every customer's home like it's our own, and back every
-                job with a workmanship guarantee.
+                trusted team of licensed electricians serving the entire Tucson metro area. Whether handling comprehensive{' '}
+                <Link to="/electrical-panel-upgrade-tucson-az" className="text-volt-400 font-semibold hover:underline">
+                  electrical panel upgrades
+                </Link>
+                , residential rewiring, Level 2{' '}
+                <Link to="/ev-charger-installation-tucson-az" className="text-volt-400 font-semibold hover:underline">
+                  EV charger installations
+                </Link>
+                , or 24/7{' '}
+                <Link to="/emergency-electrician-tucson-az" className="text-volt-400 font-semibold hover:underline">
+                  emergency electrical repairs
+                </Link>
+                , our master electricians bring over 25+ years of combined hands-on experience to every project.
               </p>
               <p>
-                We're proud to be a locally owned business serving our community — from the historic
+                We hold Arizona Registrar of Contractors license{' '}
+                <a
+                  href="https://roc.az.gov/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-volt-400 font-semibold hover:underline"
+                >
+                  AZ ROC #329844
+                </a>{' '}
+                and are fully insured and bonded. We're proud to be a locally owned business serving our community — from the historic
                 neighborhoods of central Tucson to the growing communities of Marana, Oro Valley, and
                 Vail. When you call Felix Electric, you're calling a neighbor.
               </p>

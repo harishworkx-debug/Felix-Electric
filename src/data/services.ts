@@ -434,89 +434,109 @@ export interface ServiceArea {
   county: string;
   distance: string;
   description: string;
+  utility?: string;
+  subdivisions?: string[];
   uniqueParagraphs?: string[];
 }
 
 export const serviceAreas: ServiceArea[] = [
   { 
     slug: 'tucson-az', name: 'Tucson', county: 'Pima County', distance: 'Main Hub', 
+    utility: 'Tucson Electric Power (TEP)',
+    subdivisions: ['Central Tucson', 'Sam Hughes', 'El Encanto', 'Catalina Foothills', 'Armory Park', 'Civano', 'Midvale Park'],
     description: 'Full-service licensed electrician serving all of Tucson, from downtown to the Foothills. Same-day electrical repair, panel upgrades, EV charger installation, and more.',
     uniqueParagraphs: [
-      "As our primary service area, Tucson relies on Felix Electric for everything from historic home rewiring to new commercial build-outs.",
-      "Whether you're dealing with older electrical panels in the central neighborhoods or need EV charger installations in the Foothills, our team provides code-compliant, same-day service.",
-      "We understand the unique demands the Arizona heat puts on your electrical systems, especially HVAC circuits and outdoor lighting."
+      "As our primary service area and operating hub, Tucson relies on Felix Electric for everything from historic adobe rewiring to high-capacity commercial installations.",
+      "Whether you're upgrading an outdated Zinsco or Federal Pacific panel in central neighborhoods, or installing a 50A dedicated EV charging circuit in the Catalina Foothills, our team delivers code-compliant, same-day service.",
+      "We work seamlessly with Tucson Electric Power (TEP) and City of Tucson Planning & Development Services to handle permits and meter disconnects safely."
     ]
   },
   { 
     slug: 'marana-az', name: 'Marana', county: 'Pima County', distance: '25 min NW', 
+    utility: 'TRICO Electric Cooperative & TEP',
+    subdivisions: ['Continental Ranch', 'Dove Mountain', 'Gladden Farms', 'Twin Peaks', 'San Lucas', 'Tortolita'],
     description: 'Fast residential and commercial electrical service across Marana, from Continental Ranch to Dove Mountain.',
     uniqueParagraphs: [
-      "Marana's rapid growth means many homes need modern electrical upgrades to support new appliances and electric vehicles.",
-      "From Continental Ranch to Dove Mountain, we help Marana residents with panel upgrades, dedicated circuits, and ceiling fan installations.",
-      "Our response times in Marana are fast because we know that losing power or having a faulty AC circuit in the desert heat is a true emergency."
+      "Marana's rapid residential expansion means many newer homes require dedicated electrical additions — from Level 2 EV charging stations to whole-home surge protection.",
+      "From Continental Ranch to the luxury foothills of Dove Mountain, we help Marana homeowners upgrade to 200A panels, install quiet ceiling fans, and run dedicated 240V lines for workshops and pools.",
+      "We coordinate with both TRICO Electric Cooperative and Town of Marana Building Safety inspectors to guarantee prompt project sign-offs."
     ]
   },
   { 
     slug: 'oro-valley-az', name: 'Oro Valley', county: 'Pima County', distance: '20 min N', 
+    utility: 'Tucson Electric Power (TEP)',
+    subdivisions: ['Rancho Vistoso', 'Sun City Oro Valley', 'Oro Valley Country Club', 'Canada Hills', 'La Reserve'],
     description: 'Licensed electricians serving Oro Valley homes and businesses with panel upgrades, repairs, and EV charger installs.',
     uniqueParagraphs: [
-      "Oro Valley homeowners trust Felix Electric to maintain and upgrade their residential electrical systems safely and professionally.",
-      "We frequently help Oro Valley residents with aesthetic lighting upgrades, smart home integrations, and whole-home surge protection.",
-      "If you're remodeling your kitchen or need a reliable 240V outlet for an electric vehicle, our licensed electricians are just a short drive away."
+      "Oro Valley homeowners demand high aesthetic quality and flawless safety. We specialize in custom recessed LED lighting, under-cabinet lighting, and smart home automation setups.",
+      "In established neighborhoods like Canada Hills and Rancho Vistoso, we frequently replace aging breakers and install whole-house surge suppressors to shield sensitive electronics from intense desert lightning storms.",
+      "Our licensed electricians are located just minutes south, offering fast dispatch and full Town of Oro Valley permit compliance."
     ]
   },
   { 
     slug: 'sahuarita-az', name: 'Sahuarita', county: 'Pima County', distance: '30 min S', 
+    utility: 'TEP & TRICO Electric Cooperative',
+    subdivisions: ['Rancho Sahuarita', 'Madera Highlands', 'Presidio Del Cielo', 'Sahuarita Highlands'],
     description: 'Electrical repair, lighting, and inspection services for Sahuarita and Rancho Sahuarita residents.',
     uniqueParagraphs: [
-      "Serving Sahuarita and the Rancho Sahuarita master-planned community, we provide dependable electrical troubleshooting and repairs.",
-      "Many modern homes in Sahuarita benefit from our LED lighting upgrades and dedicated circuit installations for home offices or workshops.",
-      "We pride ourselves on transparent pricing and clean, professional work for every Sahuarita family we serve."
+      "Serving Sahuarita and the Rancho Sahuarita master-planned community, we provide dependable electrical troubleshooting, circuit additions, and panel safety inspections.",
+      "With many home offices and busy family setups, Sahuarita residents rely on us for dedicated 20-amp circuits, ceiling fan installations, and outdoor security lighting.",
+      "We offer transparent, upfront flat-rate pricing so Sahuarita families always know their total investment before work begins."
     ]
   },
   { 
     slug: 'green-valley-az', name: 'Green Valley', county: 'Pima County', distance: '40 min S', 
+    utility: 'Tucson Electric Power (TEP) & TRICO',
+    subdivisions: ['Canoa Ranch', 'Quail Creek', 'Green Valley Country Club Estates', 'Desert Hills', 'Esperanza Estates'],
     description: 'Trusted electrician for Green Valley homes — safety inspections, outlet repair, and panel service.',
     uniqueParagraphs: [
-      "Green Valley is a vibrant community, and we specialize in safety-focused electrical updates for older homes and retirement properties.",
-      "From adding accessible outlets and switches to upgrading outdated breaker panels, we ensure your home is completely safe and up to current NEC code.",
-      "We offer flexible scheduling and clear communication, making us the preferred electrician for Green Valley residents."
+      "Green Valley's active adult and retirement communities frequently require safety-oriented electrical upgrades, including accessible rocker switches, GFCI outlet retrofits, and panel modernizations.",
+      "Many 1970s and 1980s Green Valley homes feature aging aluminum wiring or original breaker boxes that no longer meet insurance underwriting standards. We provide certified inspections and safe remediation.",
+      "We provide patient, clear explanations, tidy drop-cloth protection, and respectful service for every Green Valley homeowner."
     ]
   },
   { 
     slug: 'catalina-az', name: 'Catalina', county: 'Pima County', distance: '20 min N', 
+    utility: 'TRICO Electric Cooperative & TEP',
+    subdivisions: ['SaddleBrooke', 'SaddleBrooke Ranch', 'Catalina Foothills North', 'Lago Del Oro'],
     description: 'Electrical service, emergency repair, and installations for Catalina and SaddleBrooke.',
     uniqueParagraphs: [
-      "Whether you live in Catalina or SaddleBrooke, you need an electrician who understands both residential and semi-rural electrical needs.",
-      "We handle everything from securing outdoor lighting against monsoons to upgrading main service panels for increased capacity.",
-      "Our team arrives fully stocked to handle most Catalina electrical repairs on the very first visit."
+      "Whether you reside in Catalina proper or the premier SaddleBrooke communities, Felix Electric delivers master-electrician craftsmanship for semi-rural and golf-course properties.",
+      "We frequently install heavy-duty workshop wiring, outdoor monsoon-rated security lighting, and dedicated subpanels for guest casitas and detached garages.",
+      "Our service vehicles travel fully stocked to resolve Catalina service calls on the very first trip."
     ]
   },
   { 
     slug: 'vail-az', name: 'Vail', county: 'Pima County', distance: '25 min SE', 
+    utility: 'TRICO Electric Cooperative & TEP',
+    subdivisions: ['Rita Ranch', 'Corona de Tucson', 'Rancho Del Lago', 'Cienega Ridge', 'Sycamore Canyon'],
     description: 'Residential and commercial electrician serving Vail and the growing Rita Ranch area.',
     uniqueParagraphs: [
-      "Vail and Rita Ranch are expanding quickly, and Felix Electric is here to support both new construction and existing home electrical needs.",
-      "We routinely assist Vail homeowners with hot tub wiring, EV chargers, and comprehensive safety inspections.",
-      "Don't let amateur wiring risk your property; trust our fully licensed and bonded team for all your electrical projects in Vail."
+      "The rapidly expanding Vail and Rita Ranch corridor features growing families with heavy electrical demands — from Level 2 home EV chargers to hot tub disconnects and garage power upgrades.",
+      "We routinely coordinate with TRICO Electric Cooperative to facilitate meter disconnects and service upgrades across Rancho Del Lago and Corona de Tucson.",
+      "Avoid unpermitted handyman hazards; our AZ ROC #329844 licensed team guarantees work that passes Pima County inspection the first time."
     ]
   },
   { 
     slug: 'south-tucson-az', name: 'South Tucson', county: 'Pima County', distance: '5 min S', 
+    utility: 'Tucson Electric Power (TEP)',
+    subdivisions: ['City of South Tucson', 'Ochoa', 'Las Vistas', 'Fairgrounds Neighborhood'],
     description: 'Same-day electrical repair and installation services for South Tucson and surrounding neighborhoods.',
     uniqueParagraphs: [
-      "South Tucson properties often require specialized care, especially when updating historic or legacy wiring systems.",
-      "We provide fast, affordable electrical repairs, code corrections, and complete rewiring services for South Tucson businesses and homes.",
-      "Our commitment to the local community means you get honest assessments and reliable workmanship every single time."
+      "Properties in the independent City of South Tucson municipal jurisdiction often feature older legacy wiring, 2-prong ungrounded outlets, and obsolete fuse boxes.",
+      "We deliver affordable, code-compliant rewiring, grounding electrode installations, and dedicated circuits for commercial restaurants, retail, and homes.",
+      "Located just minutes away, we offer rapid same-day emergency dispatch across all of South Tucson."
     ]
   },
   { 
     slug: 'casas-adobes-az', name: 'Casas Adobes', county: 'Pima County', distance: '15 min N', 
+    utility: 'Tucson Electric Power (TEP)',
+    subdivisions: ['Casas Adobes Estates', 'Ina Road Corridor', 'Orange Grove Estates', 'Wildwood Park'],
     description: 'Panel upgrades, lighting, and electrical repair for Casas Adobes and northern Tucson.',
     uniqueParagraphs: [
-      "From custom lighting designs to complex electrical troubleshooting, we are the go-to electricians for Casas Adobes.",
-      "Many homes in this area feature beautiful architecture that requires careful, minimally invasive electrical work during renovations.",
-      "We ensure your Casas Adobes property is equipped with safe, modern electrical infrastructure that meets all modern energy demands."
+      "Casas Adobes is celebrated for its sprawling mid-century ranch architecture. These character-rich homes often require minimally invasive wiring updates, Federal Pacific panel replacements, and GFCI protection.",
+      "We specialize in preserving your home's historic aesthetic while introducing modern luxuries — such as custom recessed lighting and high-output EV home charging.",
+      "We ensure every Casas Adobes electrical project meets modern National Electrical Code (NEC) standards with zero guesswork."
     ]
   }
 ];
@@ -534,6 +554,10 @@ export const generalFaqs = [
   { q: 'Are you licensed and insured?', a: 'Yes. Felix Electric holds Arizona ROC license #329844 and is fully insured and bonded for your protection.' },
   { q: 'Do you offer same-day service?', a: 'For most repair calls we offer same-day or next-day appointments. Call (520) 929-0296 for current availability.' },
   { q: 'Do you provide free estimates?', a: 'Yes, we provide free, no-obligation quotes for most projects. For complex jobs we may charge a diagnostic fee that is credited toward the work.' },
+  { q: 'How do I know if my Tucson home needs a 200-amp electrical panel upgrade?', a: 'Common signs include frequent circuit breaker trips, flickering lights when your AC or microwave turns on, a panel older than 25 years, an existing panel rated under 100 amps, or the presence of recalled brands like Federal Pacific (FPE) Stab-Lok or Zinsco. Adding a modern heat pump, EV charger, or solar system also requires upgrading to 200 amps.' },
+  { q: 'What is required to install a Level 2 EV charger at home?', a: 'A Level 2 home charging station requires a dedicated 240-volt circuit (typically 40 to 50 amps), proper breaker space in your electrical panel, and a municipal permit. We assess your panel capacity, run heavy-gauge wire, mount the charger (indoor garage or weatherproof outdoor NEMA enclosure), and coordinate permit inspection.' },
+  { q: 'Does Felix Electric handle electrical permits with Pima County and the City of Tucson?', a: 'Yes. We pull all necessary permits with the City of Tucson Planning and Development Services, Pima County Development Services, Town of Marana, and Town of Oro Valley. We coordinate directly with Tucson Electric Power (TEP) or TRICO Electric Cooperative for meter pull disconnects and reconnects.' },
+  { q: 'How do Arizona summer heat and monsoon storms impact electrical systems?', a: 'Extreme triple-digit summer temperatures put immense stress on main breakers and outdoor disconnects, especially when air conditioners run continuously. Monsoon storms frequently generate severe voltage surges and lightning strikes. We install whole-home surge protectors and replace sun-damaged, weathered outdoor conduits to keep your home safe.' },
   { q: 'What are your payment options?', a: 'We accept cash, check, and all major credit cards. For larger projects we offer financing options — ask for details.' },
   { q: 'Do you guarantee your work?', a: 'Yes. All work is backed by our workmanship guarantee. If something isn\'t right, we\'ll come back and fix it at no charge.' },
 ];
