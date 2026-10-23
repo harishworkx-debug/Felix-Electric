@@ -9,15 +9,15 @@ interface SEOProps {
 }
 
 export default function SEO({ title, description, canonical, schema }: SEOProps) {
-  const url = `https://felixelectricaz.com${canonical}`;
+  const url = `https://www.felixelectricllc.com${canonical}`;
   const baseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Electrician',
     name: business.name,
     telephone: business.phone,
     email: business.email,
-    url: 'https://felixelectricaz.com',
-    image: 'https://felixelectricaz.com/og-image.jpg',
+    url: 'https://www.felixelectricllc.com',
+    image: 'https://www.felixelectricllc.com/og-image.jpg',
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',

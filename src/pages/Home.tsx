@@ -35,7 +35,7 @@ export default function Home() {
       <Helmet>
         <title>Electrician Tucson AZ | Licensed Electrical Contractor | Felix Electric</title>
         <meta name="description" content="Looking for a licensed electrician in Tucson, AZ? Felix Electric delivers residential & commercial electrical repairs, 200A panel upgrades, EV chargers & 24/7 emergency service. ROC #329844." />
-        <link rel="canonical" href="https://felixelectricaz.com/" />
+        <link rel="canonical" href="https://www.felixelectricllc.com/" />
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',
@@ -43,7 +43,7 @@ export default function Home() {
             name: business.name,
             telephone: business.phone,
             email: business.email,
-            url: 'https://felixelectricaz.com',
+            url: 'https://www.felixelectricllc.com',
             hasMap: business.mapsUrl,
             sameAs: [business.mapsUrl],
             image: images.hero,

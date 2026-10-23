@@ -52,19 +52,19 @@ export default function ServicePage({ service }: { service: ServicePageType }) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://felixelectricaz.com/',
+        item: 'https://www.felixelectricllc.com/',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Services',
-        item: 'https://felixelectricaz.com/services',
+        item: 'https://www.felixelectricllc.com/services',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: service.shortTitle,
-        item: `https://felixelectricaz.com/${service.slug}`,
+        item: `https://www.felixelectricllc.com/${service.slug}`,
       },
     ],
   };
@@ -74,7 +74,7 @@ export default function ServicePage({ service }: { service: ServicePageType }) {
       <Helmet>
         <title>{service.title}</title>
         <meta name="description" content={service.metaDescription} />
-        <link rel="canonical" href={`https://felixelectricaz.com/${service.slug}`} />
+        <link rel="canonical" href={`https://www.felixelectricllc.com/${service.slug}`} />
         <meta property="og:title" content={service.title} />
         <meta property="og:description" content={service.metaDescription} />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>

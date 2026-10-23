@@ -42,20 +42,20 @@ let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sit
 // Add static pages
 xml += `  <!-- Static Pages -->\n`;
 for (const page of staticPages) {
-  const loc = page.path === '' ? 'https://felixelectricaz.com/' : `https://felixelectricaz.com/${page.path}`;
+  const loc = page.path === '' ? 'https://www.felixelectricllc.com/' : `https://www.felixelectricllc.com/${page.path}`;
   xml += `  <url>\n    <loc>${loc}</loc>\n    <changefreq>${page.changefreq}</changefreq>\n    <priority>${page.priority}</priority>\n  </url>\n`;
 }
 
 // Add service pages
 xml += `\n  <!-- Service Pages -->\n`;
 for (const service of services) {
-  xml += `  <url>\n    <loc>https://felixelectricaz.com/${service}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.9</priority>\n  </url>\n`;
+  xml += `  <url>\n    <loc>https://www.felixelectricllc.com/${service}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.9</priority>\n  </url>\n`;
 }
 
 // Add consolidated service areas (single authoritative URL per area)
 xml += `\n  <!-- Service Areas -->\n`;
 for (const area of serviceAreas) {
-  xml += `  <url>\n    <loc>https://felixelectricaz.com/electrician-${area}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.9</priority>\n  </url>\n`;
+  xml += `  <url>\n    <loc>https://www.felixelectricllc.com/electrician-${area}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.9</priority>\n  </url>\n`;
 }
 
 xml += `</urlset>\n`;

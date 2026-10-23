@@ -9,7 +9,7 @@ export default function NotFound() {
       <Helmet>
         <title>Page Not Found | Felix Electric</title>
         <meta name="description" content="The page you're looking for doesn't exist. Visit Felix Electric for licensed electrician service in Tucson, AZ." />
-        <link rel="canonical" href="https://felixelectricaz.com/404" />
+        <link rel="canonical" href="https://www.felixelectricllc.com/404" />
       </Helmet>
 
       <section className="flex min-h-[70vh] items-center justify-center pt-20">

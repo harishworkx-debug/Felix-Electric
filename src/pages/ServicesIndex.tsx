@@ -15,7 +15,7 @@ export default function ServicesIndex() {
       <Helmet>
         <title>Electrical Services Tucson AZ | Felix Electric</title>
         <meta name="description" content="Full range of electrical services in Tucson, AZ — residential, commercial, repair, panel upgrades, EV chargers, lighting, inspections & emergency service. Call (520) 929-0296." />
-        <link rel="canonical" href="https://felixelectricaz.com/services" />
+        <link rel="canonical" href="https://www.felixelectricllc.com/services" />
       </Helmet>
 
       <section className="relative overflow-hidden pt-28 pb-12 md:pt-36 md:pb-16">

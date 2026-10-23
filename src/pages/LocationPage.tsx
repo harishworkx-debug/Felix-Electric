@@ -51,19 +51,19 @@ export default function LocationPage({ area, type }: { area: ServiceArea; type: 
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://felixelectricaz.com/',
+        item: 'https://www.felixelectricllc.com/',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Service Areas',
-        item: 'https://felixelectricaz.com/service-areas',
+        item: 'https://www.felixelectricllc.com/service-areas',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: `${area.name}, AZ`,
-        item: `https://felixelectricaz.com/${slug}`,
+        item: `https://www.felixelectricllc.com/${slug}`,
       },
     ],
   };
@@ -73,7 +73,7 @@ export default function LocationPage({ area, type }: { area: ServiceArea; type: 
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={metaDesc} />
-        <link rel="canonical" href={`https://felixelectricaz.com/${slug}`} />
+        <link rel="canonical" href={`https://www.felixelectricllc.com/${slug}`} />
         <script type="application/ld+json">{JSON.stringify(localSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>

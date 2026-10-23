@@ -23,7 +23,7 @@ export default function Reviews() {
       <Helmet>
         <title>Reviews | Felix Electric Tucson AZ | (520) 929-0296</title>
         <meta name="description" content="Read real customer reviews of Felix Electric — Tucson's trusted electrician. 4.9-star rating from 180+ happy customers. Call (520) 929-0296." />
-        <link rel="canonical" href="https://felixelectricaz.com/reviews" />
+        <link rel="canonical" href="https://www.felixelectricllc.com/reviews" />
         <script type="application/ld+json">{JSON.stringify(reviewSchema)}</script>
       </Helmet>
 

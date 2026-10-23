@@ -4,7 +4,7 @@ export const business = {
   phone: '+1 520-929-0296',
   phoneDisplay: '(520) 929-0296',
   phoneRaw: '5209290296',
-  email: 'info@felixelectricaz.com',
+  email: 'info@felixelectricllc.com',
   city: 'Tucson',
   state: 'Arizona',
   stateShort: 'AZ',
